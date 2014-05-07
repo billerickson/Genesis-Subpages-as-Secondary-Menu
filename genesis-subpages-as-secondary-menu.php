@@ -38,27 +38,25 @@ function be_subnav( $subnav_output ){
 		'echo' => false,
 	);
 	$subnav = wp_list_pages( apply_filters( 'be_genesis_subpages_args', $args ) );
-	if( empty( $subnav ) )
-		return;
 	
 	// Wrap the list items in an unordered list
 	$wrapper = apply_filters( 'be_genesis_subpages_wrapper', array( '<ul id="menu-genesis-subpages" class="nav genesis-nav-menu">', '</ul>' ) );
-	$subnav = $wrapper[0] . $subnav . $wrapper[1];
-
+	
 	$subnav_markup_open = genesis_markup( array(
 		'html5'   => '<nav %s>',
 		'xhtml'   => '<div id="subnav">',
 		'context' => 'nav-secondary',
 		'echo'    => false,
 	) );
+	
 	$subnav_markup_open .= genesis_structural_wrap( 'menu-secondary', 'open', 0 );
 
 	$subnav_markup_close  = genesis_structural_wrap( 'menu-secondary', 'close', 0 );
 	$subnav_markup_close .= genesis_html5() ? '</nav>' : '</div>';
 
-	$subnav_output = $subnav_markup_open . $subnav . $subnav_markup_close;
-	
-	return $subnav_output;
+	$subnav_output = $subnav_markup_open . $wrapper[0] . $subnav . $wrapper[1] . $subnav_markup_close;
+
+	return $subnav_output; 
 		
 }
 
