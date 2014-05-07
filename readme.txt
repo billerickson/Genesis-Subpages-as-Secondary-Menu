@@ -3,8 +3,8 @@ Contributors: billerickson
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2CT6DXD3NLGAS
 Tags: menu, genesis, genesiswp, studiopress
 Requires at least: 3.0
-Tested up to: 3.5.1
-Stable tag: 1.6
+Tested up to: 3.9
+Stable tag: 1.7
 
 Replaces the manually managed Secondary Menu with one that automatically lists the current section's subpages. You must be using the Genesis Framework and have the Secondary Menu enabled (Genesis > Theme Settings > Navigation Settings).
 
@@ -24,6 +24,9 @@ Simply activate the plugin, then go to a page with subpages. It should list all 
 
 
 == Changelog ==
+
+= Version 1.7 =
+* Improve HTML5 Support
 
 = Version 1.6 =
 * Add support for Genesis 2.0 menus
