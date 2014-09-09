@@ -42,7 +42,7 @@ function be_subnav( $subnav_output ){
 		return;
 	
 	// Wrap the list items in an unordered list
-	$wrapper = apply_filters( 'be_genesis_subpages_wrapper', array( '<ul id="menu-genesis-subpages" class="nav genesis-nav-menu">', '</ul>' ) );
+	$wrapper = apply_filters( 'be_genesis_subpages_wrapper', array( '<ul id="menu-genesis-subpages" class="nav genesis-nav-menu menu-secondary">', '</ul>' ) );
 	$subnav = $wrapper[0] . $subnav . $wrapper[1];
 
 	$subnav_markup_open = genesis_markup( array(
