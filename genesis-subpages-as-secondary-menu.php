@@ -64,7 +64,7 @@ function be_subnav( $subnav_output ){
 // Let Genesis know there's a subnav menu
 add_filter( 'theme_mod_nav_menu_locations', 'be_subpages_for_secondary' );
 function be_subpages_for_secondary( $locations ) {
-	if( isset( $locations['secondary'] ) )
+	if( ! isset( $locations['secondary'] ) )
 		$locations['secondary'] = 1;
 		
 	return $locations;
