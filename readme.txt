@@ -16,6 +16,8 @@ Simply activate the plugin, then go to a page with subpages. It should list all 
 
 [Support Forum](https://github.com/billerickson/Genesis-Subpages-as-Secondary-Menu/issues)
 
+[View all plugins by Bill Erickson](http://www.billerickson.net/contributions/plugins/)
+
 == Installation ==
 
 1. Upload `genesis-subpages-as-secondary-menu` to the `/wp-content/plugins/` directory.
