@@ -85,9 +85,7 @@ class BE_Genesis_Subpages_Menu {
 	 */
 	function subnav_menu_location( $locations ) {
 
-		if( ! isset( $locations['secondary'] ) )
-			$locations['secondary'] = 1;
-			
+		$locations['secondary'] = 1;
 		return $locations;
 	
 	}
