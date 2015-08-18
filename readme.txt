@@ -3,29 +3,34 @@ Contributors: billerickson
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2CT6DXD3NLGAS
 Tags: menu, genesis, genesiswp, studiopress
 Requires at least: 3.0
-Tested up to: 4.0
-Stable tag: 1.8
+Tested up to: 4.3
+Stable tag: 2.0
 
-Replaces the manually managed Secondary Menu with one that automatically lists the current section's subpages. You must be using the Genesis Framework and have the Secondary Menu enabled (Genesis > Theme Settings > Navigation Settings).
+Replaces the Genesis Secondary Menu with a dynamic listing of the current section's subpages. You must be using the Genesis Theme.
 
 == Description ==
 
-Replaces the manually managed Secondary Menu with one that automatically lists the current section's subpages. You must be using the Genesis Framework and have the Secondary Menu enabled (Genesis > Theme Settings > Navigation Settings).
+Replaces the Genesis Secondary Menu with a dynamic listing of the current section's subpages. You must be using the Genesis Theme Framework, and your child theme must support the Secondary Menu theme location.
 
 Simply activate the plugin, then go to a page with subpages. It should list all the subpages in the secondary menu. Navigating to a subpage will keep the same menu (it lists all subpages of top level page, not current page).
 
-[Support Forum](https://github.com/billerickson/Genesis-Subpages-as-Secondary-Menu/issues)
+If you go to Appearance > Menus, it will show the Secondary Menu location as currently set to "Genesis Subpages".
 
-[View all plugins by Bill Erickson](http://www.billerickson.net/contributions/plugins/)
+Want a similar listing in your sidebar? Use my [BE Subpages Widget](https://wordpress.org/plugins/be-subpages-widget/) plugin
+
+[Support Forum](https://github.com/billerickson/Genesis-Subpages-as-Secondary-Menu/issues) | [View all plugins by Bill Erickson](http://www.billerickson.net/contributions/plugins/)
 
 == Installation ==
 
 1. Upload `genesis-subpages-as-secondary-menu` to the `/wp-content/plugins/` directory.
 1. Activate the plugin through the *Plugins* menu in WordPress.
-1. Go to Genesis > Theme Settings > Navigation Settings and ensure "Include Secondary Navigation Menu" is checked.
 
 
 == Changelog ==
+
+= Version 2.0 = 
+* Completely rewritten from the ground up. Code is cleaner and improved performance
+* In the Menus section, the secondary menu is now marked as active with "Genesis Subpages" to improve usability
 
 = Version 1.8 = 
 * Fixed typo that prevented secondary menu from appearing
