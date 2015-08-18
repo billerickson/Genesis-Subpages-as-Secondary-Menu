@@ -76,3 +76,17 @@ function be_subnav_classes( $classes ) {
 	$classes[] = 'menu-item';
 	return $classes;
 }
+
+// Give the dynamic submenu a name 
+add_filter( 'wp_get_nav_menu_object', 'be_subpages_secondary_menu_object', 10, 2 );
+function be_subpages_secondary_menu_object( $menu_object, $menu_id ) {
+
+	if( 1 === $menu_id ) {
+		$menu_object = new stdClass();
+		$menu_object->name = 'Genesis Subpages';
+		$menu_object->term_id = 1;
+		$menu_object->slug = 'genesis-subpages-as-secondary-menu';	
+	}
+
+	return $menu_object;
+}
