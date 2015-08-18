@@ -90,3 +90,19 @@ function be_subpages_secondary_menu_object( $menu_object, $menu_id ) {
 
 	return $menu_object;
 }
+
+// Mark Secondary Menu as having a menu 
+add_filter( 'has_nav_menu', 'be_secondary_menu_has_menu', 10, 2 );
+function be_secondary_menu_has_menu ( $has_nav_menu, $location ) {
+	if( 'secondary' == $location )
+		$has_nav_menu = true;
+	return $has_nav_menu;
+}
+
+// Short Circuit wp_nav_menu() for secondary menu
+add_filter( 'pre_wp_nav_menu', 'be_secondary_menu_pre_output', 10, 2 );
+function be_secondary_menu_pre_output( $output, $args ) {
+	if( 'secondary' == $args->theme_location )
+		$output = 1;
+	return $output;
+}
