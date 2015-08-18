@@ -25,7 +25,7 @@ class BE_Genesis_Subpages_Menu {
 	 *
 	 * Registers our activation hook and init hook
 	 *
-	 * @since 1.0
+	 * @since 2.0
 	 * @author Bill Erickson
 	 */
 	function __construct() {
@@ -39,7 +39,7 @@ class BE_Genesis_Subpages_Menu {
 	 *
 	 * Confirm site is using Genesis
 	 *
-	 * @since 1.0
+	 * @since 2.0
 	 * @author Bill Erickson
 	 */
 	function activation_hook() {
@@ -54,7 +54,7 @@ class BE_Genesis_Subpages_Menu {
 	 *
 	 * Register all our functions to the appropriate hook
 	 *
-	 * @since 1.0
+	 * @since 2.0
 	 * @author Bill Erickson
 	 */
 	function init() {
@@ -82,6 +82,11 @@ class BE_Genesis_Subpages_Menu {
 	/**
 	 * Indicate the Secondary Menu location is in use
 	 *
+	 * @param array $locations, menu locations and the menu ID assigned to that location
+	 * @return array $locations
+	 *
+	 * @since 2.0
+	 * @author Bill Erickson
 	 */
 	function subnav_menu_location( $locations ) {
 
@@ -93,6 +98,12 @@ class BE_Genesis_Subpages_Menu {
 	/**
 	 * Dynamic Menu Object
 	 *
+	 * @param object $menu_object
+	 * @param int $menu_id
+	 * @return object $menu_object
+	 *
+	 * @since 2.0
+	 * @author Bill Erickson
 	 */
 	function subnav_menu_object( $menu_object, $menu_id ) {
 
@@ -110,6 +121,12 @@ class BE_Genesis_Subpages_Menu {
 	/**
 	 * Mark Secondary Menu location as having a menu
 	 *
+	 * @param bool $has_nav_menu
+	 * @param string $location
+	 * @return bool $has_nav_menu
+	 *
+	 * @since 2.0
+	 * @author Bill Erickson
 	 */
 	function subnav_menu_has_menu( $has_nav_menu, $location ) {
 
@@ -122,6 +139,12 @@ class BE_Genesis_Subpages_Menu {
 	/**
 	 * Short Circuit wp_nav_menu() for secondary menu
 	 *
+	 * @param string $output, output of wp_nav_menu (I'm overriding this later)
+	 * @param object $args, wp_nav_menu arguments
+	 * @return string $output
+	 *
+	 * @since 2.0
+	 * @author Bill Erickson
 	 */
 	function be_pre_subnav( $output, $args ) {
 
@@ -134,6 +157,11 @@ class BE_Genesis_Subpages_Menu {
 	/**
 	 * Add menu-item class
 	 *
+	 * @param array $classes
+	 * @return array $classes
+	 *
+	 * @since 2.0
+	 * @author Bill Erickson
 	 */
 	function subnav_item_classes( $classes ) {
 		$classes[] = 'menu-item';
@@ -143,6 +171,11 @@ class BE_Genesis_Subpages_Menu {
 	/**
 	 * Display Secondary Nav with Subpages
 	 *
+	 * @param string $output, output of genesis_do_subnav()
+	 * @return string $output
+	 *
+	 * @since 2.0
+	 * @author Bill Erickson
 	 */
 	function subnav_output( $output ) {
 	
